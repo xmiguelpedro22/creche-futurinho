@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creche Escola Futurinho — Creche na Tijuca, Rio de Janeiro</title>
+<meta name="description" content="Creche e escola infantil na Tijuca, RJ. Do Berçário ao Pré 2, das 7h às 19h, com nutricionista própria, projeto bilíngue e ambiente monitorado. Agende uma visita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Creche Escola Futurinho",
+  "description": "Creche e escola infantil na Tijuca, RJ. Do Berçário ao Pré 2, das 7h às 19h.",
+  "address": { "@type": "PostalAddress", "streetAddress": "Rua Engenheiro Adel, 43", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR" },
+  "telephone": "+55-21-96620-3740",
+  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "19:00" }],
+  "areaServed": "Tijuca, Rio de Janeiro",
+  "sameAs": ["https://instagram.com/crechefuturinho"]
+}</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FFF9F0; color: #23305A; font-family: 'Nunito', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #E8622C; text-decoration: none; }
+  a:hover { color: #C94F1F; }
+  ::selection { background: #FFE29B; }
+  @keyframes fut-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes fut-float2 { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+  @keyframes fut-pulse { 0%,100% { transform: scale(1); opacity: .5; } 50% { transform: scale(1.25); opacity: .15; } }
+  #fut-burger { display: none; }
+  [data-revealed] { opacity: 1 !important; transform: none !important; }
+  @media (max-width: 900px) {
+    #fut-links { display: none !important; }
+    #fut-burger { display: grid !important; }
+    #fut-hero-grid, #fut-saude-grid, #fut-espacos-grid, #fut-ativ-grid, #fut-paraquem-grid, #fut-depo-grid, #fut-conv-grid { grid-template-columns: 1fr !important; }
+    #fut-feat-grid, #fut-rotina-grid, #fut-equipe-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    #fut-social-strip { flex-direction: column !important; gap: 8px !important; }
+    #fut-h1 { font-size: 38px !important; }
+    #fut-conv-card, #fut-saude-card { padding: 32px 24px !important; }
+    #fut-paraquem-left { position: static !important; }
+  }
+  @media (max-width: 560px) {
+    #fut-feat-grid, #fut-rotina-grid, #fut-equipe-grid, [data-collapse] { grid-template-columns: 1fr !important; }
+    #fut-h1 { font-size: 32px !important; }
+  }
+  .u0{width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: none; padding: 20px 24px; cursor: pointer; text-align: left; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 18px; color: #23305A;}
+  .u1{background: #fff; border: 1px solid #F0E6D6; border-radius: 24px; padding: 26px 24px; display: flex; flex-direction: column; gap: 12px; transition: transform .2s ease, box-shadow .2s ease;}
+  .u2{flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #FFF3DF; display: grid; place-items: center; font-size: 14px; transition: transform .3s ease;}
+  .u3{background: #fff; border: 1px solid #F0E6D6; border-radius: 22px; padding: 24px 22px; display: flex; flex-direction: column; gap: 12px; transition: transform .2s ease, box-shadow .2s ease;}
+  .u4{margin: 0; background: #fff; border-radius: 22px; padding: 24px 26px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 14px 34px -22px rgba(35,48,90,.28); transition: transform .2s ease, box-shadow .2s ease;}
+  .u5{margin: 0; font-size: 14.5px; line-height: 1.6; color: #414B6E;}
+  .u6{font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;}
+  .u7{display: flex; align-items: center; gap: 18px; background: #fff; border: 1px solid #F0E6D6; border-radius: 20px; padding: 20px 24px; transition: transform .2s ease, box-shadow .2s ease;}
+  .u8{font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 19px; margin: 0;}
+  .u9{flex: 0 0 auto; width: 26px; height: 26px; border-radius: 8px; border: 2px solid #F27DA8; color: #F27DA8; display: grid; place-items: center;}
+  .u10{background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;}
+  .u11{margin: 0; padding: 0 24px 22px; font-size: 15.5px; line-height: 1.7; color: #414B6E;}
+  .u12{background: #fff; border: 1px solid #F0E6D6; border-radius: 18px; overflow: hidden;}
+  .u13{color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px; border-bottom: 1px solid #F0E6D6;}
+  .u14{border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 16px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; width: 100%; box-sizing: border-box;}
+  .u15{font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 18px; margin: 0;}
+  .u16{font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; text-wrap: pretty;}
+  .u17{max-height: 0; overflow: hidden; transition: max-height .35s ease;}
+  .u18{display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;}
+  .u19{display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; font-weight: 700; color: #23305A;}
+  .u20{display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid transparent; border-radius: 16px; padding: 14px 18px; cursor: pointer; font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: #23305A; transition: border-color .2s ease;}
+  .u21{margin: 0; font-size: 16.5px; font-weight: 700; line-height: 1.5;}
+  .u22{display: flex; align-items: center; gap: 10px; color: #fff; font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 17px;}
+  .u23{margin: 0; font-size: 15.5px; line-height: 1.65; color: #23305A;}
+  .u24{width: 52px; height: 52px; border-radius: 18px; background: #FFE9C2; display: grid; place-items: center; font-size: 26px;}
+  .u25{width: 52px; height: 52px; border-radius: 18px; background: #EAF1FF; display: grid; place-items: center; font-size: 26px;}
+  .u26{border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 12px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; background: #fff; width: 100%; box-sizing: border-box;}
+  .u27{position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 28px; border: 6px solid #fff; box-shadow: 0 20px 50px -20px rgba(35,48,90,.35); opacity: 0; transition: opacity .5s ease;}
+  .u28{color: #FFC53D; font-size: 15px; letter-spacing: 3px;}
+  .u29{font-size: 13px; color: #5F6885; font-weight: 700;}
+  .u30{flex: 0 0 auto; width: 40px; height: 40px; border-radius: 14px; background: #EAF1FF; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px;}
+  .u31{flex: 0 0 auto; width: 40px; height: 40px; border-radius: 14px; background: #FFE9C2; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px;}
+  .u32{display: flex; align-items: center; gap: 12px;}
+  .u33{background: #fff; border: 2px solid #DCE3F2; color: #23305A; font-weight: 800; font-size: 15px; padding: 10px 20px; border-radius: 999px; transition: border-color .15s ease;}
+  .u34{display: flex; flex-direction: column;}
+  .u35{font-weight: 800; font-size: 15.5px;}
+  .u36{flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #FFE9C2; display: grid; place-items: center; font-size: 16px;}
+  .u37{margin: 0; font-size: 17px; line-height: 1.7; color: #414B6E;}
+  .u38{width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; background: #EAF1FF;}
+  .u39{width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; background: #FFE9C2;}
+  .u40{width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; background: #FFE0D1;}
+  .u41{width: 52px; height: 52px; border-radius: 18px; background: #FFE0D1; display: grid; place-items: center; font-size: 26px;}
+  .u42{display: flex; align-items: center; gap: 10px;}
+  .u43{display: flex; align-items: center; gap: 7px;}
+  .u44{font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: #FFC53D;}
+  .u45{display: flex; flex-direction: column; gap: 12px; font-size: 15px;}
+  .u46{margin: 0; font-size: 17px; line-height: 1.7; color: #C8D2EE;}
+  .u47{display: grid; grid-template-columns: 1fr 1fr; gap: 14px;}
+  .u48{display: flex; flex-direction: column; gap: 10px;}
+  .u49{display: flex; flex-direction: column; gap: 18px;}
+  .u50{display: flex; gap: 10px; flex-wrap: wrap;}
+  .u51{max-width: 1160px; margin: 0 auto;}
+  .u52{color: #fff; font-weight: 700;}
+  .futlogo{display:flex;flex-direction:column;line-height:1;gap:4px;}
+  .futlogo em{font-style:normal;font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:#23305A;opacity:.75;}
+  .futlogo b{font-family:'Fredoka',sans-serif;font-weight:700;font-size:27px;letter-spacing:.5px;white-space:nowrap;}
+  .futlogo.dark em{color:#B8C4E8;opacity:1;}
+  .futlogo.big em{font-size:14px;}
+  .futlogo.big b{font-size:34px;}
+</style>
+</head>
+<body>
+<header id="fut-nav" data-screen-label="Navegação" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s ease, box-shadow .3s ease; background: rgba(255,249,240,0);">
+  <nav style="max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px;">
+    <a href="#inicio" class="js-close-menu" style="display: flex; align-items: center; flex: 0 0 auto;">
+      <span class="futlogo" role="img" aria-label="Creche Escola Futurinho"><em>Creche Escola</em><b aria-hidden="true"><span style="color:#008CE4">F</span><span style="color:#FF893B">U</span><span style="color:#6FD087">T</span><span style="color:#A170EB">U</span><span style="color:#FF8FB4">R</span><span style="color:#3ACED6">I</span><span style="color:#FF893B">N</span><span style="color:#008CE4">H</span><span style="color:#6FD087">O</span></b></span>
+    </a>
+    <div id="fut-links" style="display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 700;">
+      <a href="#sobre" style="color: #23305A;" style-hover="color: #E8622C;">Sobre</a>
+      <a href="#saude" style="color: #23305A;" style-hover="color: #E8622C;">Saúde</a>
+      <a href="#espacos" style="color: #23305A;" style-hover="color: #E8622C;">Espaços</a>
+      <a href="#rotina" style="color: #23305A;" style-hover="color: #E8622C;">Rotina</a>
+      <a href="#depoimentos" style="color: #23305A;" style-hover="color: #E8622C;">Depoimentos</a>
+      <a href="#faq" style="color: #23305A;" style-hover="color: #E8622C;">Dúvidas</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto;">
+      <a href="#matricula" data-cta="bg" class="js-close-menu" style="background: #E8622C; color: #fff; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 999px; box-shadow: 0 3px 0 rgba(35,48,90,.18); transition: transform .15s ease; white-space: nowrap;" style-hover="transform: translateY(-2px); color: #fff;">Agendar visita</a>
+      <button id="fut-burger" aria-label="Abrir menu" aria-expanded="false" style="width: 44px; height: 44px; border: 2px solid #DCE3F2; border-radius: 14px; background: #fff; cursor: pointer; place-items: center; color: #23305A;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </nav>
+  <div id="fut-mobile-menu" style="display: none; background: #FFF9F0; border-top: 1px solid #F0E6D6; box-shadow: 0 20px 30px -18px rgba(35,48,90,.3); flex-direction: column; padding: 8px 24px 18px;">
+    <a href="#sobre" class="js-close-menu u13">Sobre</a>
+    <a href="#saude" class="js-close-menu u13">Saúde</a>
+    <a href="#espacos" class="js-close-menu u13">Espaços</a>
+    <a href="#rotina" class="js-close-menu u13">Rotina</a>
+    <a href="#depoimentos" class="js-close-menu u13">Depoimentos</a>
+    <a href="#faq" class="js-close-menu" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px;">Dúvidas</a>
+  </div>
+</header>
+<section id="inicio" data-screen-label="Hero" style="position: relative; overflow: hidden; padding: 140px 24px 64px;">
+  <div style="position: absolute; top: -120px; right: -120px; width: 420px; height: 420px; border-radius: 50%; background: #FFE9C2;"></div>
+  <div style="position: absolute; bottom: -80px; left: -100px; width: 300px; height: 300px; border-radius: 50%; background: #EAF1FF;"></div>
+  <div id="fut-hero-grid" style="position: relative; max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex;">
+        <span style="display: inline-flex; align-items: center; gap: 8px; background: #FFF; border: 2px solid #FFC53D; border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 800;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #4BAE6B;"></span>
+          Matrículas abertas · Berçário ao Pré 2
+        </span>
+      </div>
+      <h1 id="fut-h1" style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 50px; line-height: 1.12; margin: 0; text-wrap: pretty;">
+        Creche na Tijuca onde seu filho é cuidado
+        <span style="position: relative; display: inline-block; white-space: nowrap;">
+          <span style="position: absolute; left: -4px; right: -4px; bottom: 4px; height: 38%; background: #FFC53D; border-radius: 6px; z-index: 0;"></span>
+          <span style="position: relative; z-index: 1;">como em casa</span>
+        </span>
+      </h1>
+      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #414B6E; max-width: 480px;">Do Berçário ao Pré 2, das 7h às 19h. Equipe preparada, ambiente monitorado e nutricionista própria — para você trabalhar tranquilo sabendo que ele está bem.</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="#matricula" data-cta="bg" style="background: #E8622C; color: #fff; font-weight: 800; font-size: 17px; padding: 15px 28px; border-radius: 999px; box-shadow: 0 4px 0 rgba(35,48,90,.2); transition: transform .15s ease;" style-hover="transform: translateY(-3px); color: #fff;">Agendar uma visita</a>
+        <a href="#" class="js-wa-link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 2px solid #DCE3F2; color: #23305A; font-weight: 800; font-size: 17px; padding: 13px 24px; border-radius: 999px; transition: border-color .15s ease, transform .15s ease;" style-hover="border-color: #4BAE6B; transform: translateY(-3px); color: #23305A;">
+          <span style="width: 22px; height: 22px; border-radius: 50%; background: #4BAE6B; display: grid; place-items: center; flex: 0 0 auto;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.19 0 4.25.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.71c0 4.48-3.65 8.12-8.13 8.12h-.01a8.1 8.1 0 0 1-4.1-1.12l-.29-.17-3.11.82.83-3.03-.19-.31a8.09 8.09 0 0 1-1.24-4.32c.01-4.48 3.65-8.1 8.13-8.1m4.47 11.61c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.29.37-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.71 2.6 4.14 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.09.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28"></path></svg>
+          </span>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div style="display: flex; gap: 22px; flex-wrap: wrap; margin-top: 6px; font-size: 14px; font-weight: 700; color: #414B6E;">
+        <span class="u43"><span style="color: #E8A81E;">●</span> Ambiente monitorado</span>
+        <span class="u43"><span style="color: #E8622C;">●</span> Nutricionista própria</span>
+        <span class="u43"><span style="color: #4A7DE0;">●</span> Projeto bilíngue</span>
+      </div>
+    </div>
+    <div style="position: relative;">
+      <img src="https://futurinho-landing-page.vercel.app/assets/hero-kids-DXMix_MF.jpg" alt="Crianças brincando felizes na Creche Escola Futurinho" style="width: 100%; aspect-ratio: 4/4.4; object-fit: cover; border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; border: 6px solid #fff; box-shadow: 0 24px 60px -24px rgba(35,48,90,.35); display: block;">
+      <div style="position: absolute; top: 24px; left: -26px; background: #fff; border-radius: 18px; padding: 12px 18px; box-shadow: 0 12px 30px -12px rgba(35,48,90,.3); animation: fut-float 5s ease-in-out infinite;">
+        <div style="font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 26px; color: #E8622C;"><span id="fut-counter">+200</span></div>
+        <div style="font-size: 13px; font-weight: 700; color: #414B6E;">famílias atendidas</div>
+      </div>
+      <div style="position: absolute; bottom: 36px; right: -18px; background: #23305A; color: #fff; border-radius: 18px; padding: 12px 18px; box-shadow: 0 12px 30px -12px rgba(35,48,90,.4); animation: fut-float2 6s ease-in-out infinite;">
+        <div style="font-size: 13px; font-weight: 700; color: #B8C4E8;">Seg a sex</div>
+        <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px;">7h às 19h</div>
+      </div>
+      <div style="position: absolute; top: -14px; right: 40px; width: 44px; height: 44px; border-radius: 50%; background: #FFC53D; animation: fut-pulse 4s ease-in-out infinite;"></div>
+    </div>
+  </div>
+</section>
+<div data-screen-label="Prova social" style="background: #23305A; padding: 18px 24px;">
+  <div id="fut-social-strip" style="max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
+    <span class="u22"><span style="color: #FFC53D;">✦</span> +200 famílias atendidas</span>
+    <span class="u22"><span style="color: #FFC53D;">★</span> Avaliação 5★ das famílias</span>
+    <span class="u22"><span style="color: #FFC53D;">✦</span> Aberto de seg a sex, 7h às 19h</span>
+  </div>
+</div>
+<section id="sobre" data-screen-label="Sobre" style="padding: 96px 24px 40px;">
+  <div data-reveal style="max-width: 820px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 20px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <span class="u6">Quem somos</span>
+    <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 38px; line-height: 1.2; margin: 0; text-wrap: pretty;">Escolher uma creche é uma das decisões mais importantes da sua vida. <span style="color: #E8622C;">A gente sabe disso.</span></h2>
+    <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #414B6E;">Por isso, oferecemos um ambiente preparado para acolher, cuidar e estimular cada criança com responsabilidade e carinho — para que pais e mães possam trabalhar tranquilos, sabendo que seu filho está em boas mãos.</p>
+  </div>
+</section>
+<section id="diferenciais" data-screen-label="Diferenciais" style="padding: 56px 24px;">
+  <div class="u51">
+    <div data-reveal style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span class="u6">Nossos diferenciais</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; max-width: 560px; text-wrap: pretty;">Tudo o que importa para o desenvolvimento do seu filho</h2>
+    </div>
+    <div id="fut-feat-grid" data-reveal style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <div class="u3" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span class="u39">👩‍🏫</span>
+        <h3 class="u15">Equipe qualificada</h3>
+        <p class="u5">Profissionais preparados e apaixonados por educação infantil.</p>
+      </div>
+      <div class="u3" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span class="u38">🛡️</span>
+        <h3 class="u15">Ambiente seguro e monitorado</h3>
+        <p class="u5">Espaços pensados para a segurança das crianças, o dia inteiro.</p>
+      </div>
+      <div class="u3" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span class="u40">🥗</span>
+        <h3 class="u15">Alimentação com nutricionista</h3>
+        <p class="u5">Cardápios balanceados e adaptados à faixa etária de cada criança.</p>
+      </div>
+      <div class="u3" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span class="u39">💬</span>
+        <h3 class="u15">Comunicação com responsáveis</h3>
+        <p class="u5">Você acompanha de perto o dia a dia do seu filho.</p>
+      </div>
+      <div class="u3" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span class="u38">🤝</span>
+        <h3 class="u15">Social e emocional</h3>
+        <p class="u5">Convivência, afeto e autonomia desde os primeiros anos.</p>
+      </div>
+      <div class="u3" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span class="u40">🌱</span>
+        <h3 class="u15">Adaptação cuidadosa</h3>
+        <p class="u5">Período de adaptação gradual, no ritmo de cada família.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="saude" data-screen-label="Saúde escolar" style="padding: 56px 24px;">
+  <div id="fut-saude-card" data-reveal style="max-width: 1160px; margin: 0 auto; background: #fff; border: 1px solid #F0E6D6; border-radius: 32px; padding: 56px; box-shadow: 0 20px 50px -30px rgba(35,48,90,.25); opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <div id="fut-saude-grid" style="display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center;">
+      <div class="u49">
+        <span class="u6">Saúde escolar</span>
+        <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.15; margin: 0; text-wrap: pretty;">Se algo acontecer, seu filho é atendido na hora</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #414B6E;">Nossa equipe é treinada em primeiros socorros e seguimos protocolos claros para alergias e situações de emergência — com apoio do plano de saúde escolar em parceria com a Villas Boas.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span class="u19"><span class="u36">🩺</span> Atendimento preventivo e triagens periódicas</span>
+          <span class="u19"><span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #EAF1FF; display: grid; place-items: center; font-size: 16px;">💻</span> Consultas on-line e teleorientação de emergência</span>
+          <span class="u19"><span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #FFE0D1; display: grid; place-items: center; font-size: 16px;">⛑️</span> Treinamento de primeiros socorros para a equipe escolar</span>
+          <span class="u19"><span class="u36">🛡️</span> Protocolos para gestão de surtos e alergias</span>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; background: #FFF9F0; border: 1px solid #F0E6D6; border-radius: 26px; padding: 44px 32px;">
+        <img src="https://futurinho-assets.vercel.app/assets/villasboas-logo.jpg" alt="Villas Boas" loading="lazy" style="width: 200px; max-width: 100%; display: block;">
+        <p style="margin: 0; text-align: center; font-size: 14.5px; line-height: 1.6; color: #414B6E; font-weight: 700;">Plano de saúde escolar em parceria com a <strong style="color: #23305A;">Villas Boas</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="espacos" data-screen-label="Espaços" style="padding: 56px 24px; background: #FFF3DF;">
+  <div id="fut-espacos-grid" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center;">
+    <div data-reveal style="display: flex; flex-direction: column; gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span class="u6">Nossa estrutura</span>
+      <h2 class="u16">Um espaço pensado em cada detalhe</h2>
+      <p class="u37">Salas organizadas, espaço para brincar, área de descanso, refeitório e banheiros adaptados — tudo limpo, seguro e visualmente calmo.</p>
+      <div class="u48" role="tablist">
+        <button data-space="0" style="display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid #E8622C; border-radius: 16px; padding: 14px 18px; cursor: pointer; font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: #23305A; transition: border-color .2s ease;">🏡 Pátio — espaço amplo para brincadeiras</button>
+        <button data-space="1" class="u20">🍼 Berçário — aconchegante e seguro</button>
+        <button data-space="2" class="u20">✏️ Sala de aula — iluminada e organizada</button>
+      </div>
+    </div>
+    <div data-reveal style="position: relative; aspect-ratio: 16/11.5; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <img data-space-img="0" src="https://futurinho-landing-page.vercel.app/assets/patio-1uwXB6Fq.jpg" alt="Pátio da Creche Escola Futurinho" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 28px; border: 6px solid #fff; box-shadow: 0 20px 50px -20px rgba(35,48,90,.35); opacity: 1; transition: opacity .5s ease;">
+      <img data-space-img="1" src="https://futurinho-landing-page.vercel.app/assets/bercario-DW5eEqyo.jpg" alt="Berçário da Creche Escola Futurinho" loading="lazy" class="u27">
+      <img data-space-img="2" src="https://futurinho-landing-page.vercel.app/assets/sala-de-aula-ClVBdCv-.jpg" alt="Sala de aula da Creche Escola Futurinho" loading="lazy" class="u27">
+    </div>
+  </div>
+</section>
+<section id="rotina" data-screen-label="Rotina" style="padding: 96px 24px 40px; overflow: hidden;">
+  <div class="u51">
+    <div data-reveal style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 44px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <div class="u48">
+        <span class="u6">Um dia na Futurinho</span>
+        <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; max-width: 520px; text-wrap: pretty;">Uma rotina cuidadosa, lúdica e cheia de aprendizado</h2>
+      </div>
+      <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #414B6E; max-width: 360px;">Cada atividade é planejada respeitando o tempo e a individualidade de cada criança.</p>
+    </div>
+  </div>
+  <div id="fut-rotina-grid" data-reveal style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u25">📖</span>
+      <h3 class="u8">Contação de histórias</h3>
+      <p class="u5">Imaginação e linguagem em rodas de leitura.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u24">🤸</span>
+      <h3 class="u8">Psicomotricidade</h3>
+      <p class="u5">Movimento e coordenação com brincadeiras educativas.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u41">🎵</span>
+      <h3 class="u8">Musicalização</h3>
+      <p class="u5">Música e ritmo para desenvolver expressão e escuta.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u25">🌎</span>
+      <h3 class="u8">Projeto Bilíngue</h3>
+      <p class="u5">Primeiros contatos com o inglês de forma natural e lúdica.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u24">🎨</span>
+      <h3 class="u8">Artes e criatividade</h3>
+      <p class="u5">Pintura, colagem e experiências sensoriais.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u41">🧩</span>
+      <h3 class="u8">Jogos pedagógicos</h3>
+      <p class="u5">Raciocínio e concentração no aprender brincando.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u25">🌿</span>
+      <h3 class="u8">Brincadeiras ao ar livre</h3>
+      <p class="u5">Exploração e movimento no pátio, com segurança.</p>
+    </div>
+    <div class="u1" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+      <span class="u24">🤝</span>
+      <h3 class="u8">Roda de convivência</h3>
+      <p class="u5">Socialização, afeto e autonomia no dia a dia.</p>
+    </div>
+  </div>
+</section>
+<section id="atividades" data-screen-label="Atividades extras" style="padding: 80px 24px; background: #23305A; color: #fff; margin-top: 56px;">
+  <div id="fut-ativ-grid" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+    <div data-reveal style="position: relative; aspect-ratio: 4/4.2; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <img data-act-img="0" src="https://futurinho-landing-page.vercel.app/assets/ballet-ByC_3Y_W.jpg" alt="Crianças praticando ballet" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 45% 55% 50% 50% / 48% 48% 52% 52%; border: 6px solid rgba(255,255,255,.15); opacity: 1; transition: opacity .5s ease;">
+      <img data-act-img="1" src="https://futurinho-landing-page.vercel.app/assets/capoeira-BQIJf0zw.jpg" alt="Crianças praticando capoeira" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 45% 55% 50% 50% / 48% 48% 52% 52%; border: 6px solid rgba(255,255,255,.15); opacity: 0; transition: opacity .5s ease;">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #FFC53D;">Atividades extras</span>
+      <h2 class="u16">Muito além da sala de aula</h2>
+      <div style="display: flex; gap: 12px;">
+        <button data-act="0" style="background: #FFC53D; color: #23305A; border: none; border-radius: 999px; padding: 12px 26px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; cursor: pointer; transition: background .2s ease, color .2s ease;">🩰 Ballet</button>
+        <button data-act="1" style="background: rgba(255,255,255,.1); color: #fff; border: none; border-radius: 999px; padding: 12px 26px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; cursor: pointer; transition: background .2s ease, color .2s ease;">🥋 Capoeira</button>
+      </div>
+      <div data-act-panel="0" style="display: flex; flex-direction: column; gap: 14px;">
+        <p class="u46">Graça, ritmo e expressão: aulas de ballet que desenvolvem coordenação, postura e expressão corporal de forma lúdica e divertida.</p>
+        <div class="u50">
+          <span class="u10">Coordenação motora</span>
+          <span class="u10">Postura e equilíbrio</span>
+          <span class="u10">Expressão artística</span>
+        </div>
+      </div>
+      <div data-act-panel="1" style="display: none; flex-direction: column; gap: 14px;">
+        <p class="u46">Ritmo, cultura e movimento: a capoeira trabalha o corpo inteiro e apresenta às crianças uma tradição brasileira cheia de música.</p>
+        <div class="u50">
+          <span class="u10">Ritmo e musicalidade</span>
+          <span class="u10">Agilidade e força</span>
+          <span class="u10">Cultura brasileira</span>
+        </div>
+      </div>
+      <a href="#matricula" style="align-self: flex-start; color: #FFC53D; font-weight: 800; font-size: 16px; border-bottom: 2px solid #FFC53D; padding-bottom: 2px;" style-hover="color: #FFD76B;">Quero saber mais →</a>
+    </div>
+  </div>
+</section>
+<section id="paraquem" data-screen-label="Para quem" style="padding: 56px 24px;">
+  <div id="fut-paraquem-grid" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
+    <div id="fut-paraquem-left" data-reveal style="position: sticky; top: 110px; display: flex; flex-direction: column; gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span class="u6">Para quem é</span>
+      <h2 class="u16">Feita para famílias que querem o melhor — sem abrir mão da rotina.</h2>
+      <p class="u37">Atendemos crianças do <strong>Berçário ao Pré 2</strong>, com turmas pensadas para cada fase de desenvolvimento, respeitando o tempo e as conquistas de cada uma.</p>
+    </div>
+    <div data-reveal style="display: flex; flex-direction: column; gap: 14px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <div class="u7" style-hover="transform: translateX(8px); box-shadow: 0 12px 28px -16px rgba(35,48,90,.25);">
+        <span class="u31">1</span>
+        <p class="u21">Famílias que trabalham durante o dia</p>
+      </div>
+      <div class="u7" style-hover="transform: translateX(8px); box-shadow: 0 12px 28px -16px rgba(35,48,90,.25);">
+        <span class="u30">2</span>
+        <p class="u21">Mães e pais solo que precisam de uma rede de apoio confiável</p>
+      </div>
+      <div class="u7" style-hover="transform: translateX(8px); box-shadow: 0 12px 28px -16px rgba(35,48,90,.25);">
+        <span style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 14px; background: #FFE0D1; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px;">3</span>
+        <p class="u21">Pais que buscam segurança e desenvolvimento para os filhos</p>
+      </div>
+      <div class="u7" style-hover="transform: translateX(8px); box-shadow: 0 12px 28px -16px rgba(35,48,90,.25);">
+        <span class="u31">4</span>
+        <p class="u21">Crianças em fase de socialização</p>
+      </div>
+      <div class="u7" style-hover="transform: translateX(8px); box-shadow: 0 12px 28px -16px rgba(35,48,90,.25);">
+        <span class="u30">5</span>
+        <p class="u21">Responsáveis que querem acompanhamento próximo do dia a dia</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="depoimentos" data-screen-label="Depoimentos" style="padding: 56px 0 96px; overflow: hidden;">
+  <div data-reveal style="max-width: 820px; margin: 0 auto 44px; text-align: center; display: flex; flex-direction: column; gap: 10px; padding: 0 24px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <span class="u6">Quem confia, recomenda</span>
+    <h2 class="u16">O que as famílias dizem sobre nós</h2>
+    <p style="margin: 0; font-size: 16px; color: #414B6E;">Comentários de famílias no <a href="https://www.instagram.com/crechefuturinho" target="_blank" style="font-weight: 800;">@crechefuturinho</a></p>
+  </div>
+  <div id="fut-depo-grid" style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 320px 1fr; gap: 56px; align-items: start;">
+    <div data-reveal style="display: flex; flex-direction: column; align-items: center; gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <div style="width: 280px; background: #23305A; border-radius: 40px; padding: 12px; box-shadow: 0 24px 60px -24px rgba(35,48,90,.45);">
+        <div style="background: #fff; border-radius: 30px; overflow: hidden; position: relative; aspect-ratio: 828/560;">
+          <span style="position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 3; width: 92px; height: 22px; background: #23305A; border-radius: 999px;"></span>
+          <img src="https://futurinho-assets.vercel.app/assets/depoimento-foto.jpg" alt="Foto publicada por @crechefuturinho no Instagram: espaço de brincadeiras da Creche Escola Futurinho" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 28px 16px 12px; background: linear-gradient(to top, rgba(0,0,0,.68), rgba(0,0,0,0)); display: flex; flex-direction: column; gap: 3px;">
+            <span style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 14px; color: #fff;">@crechefuturinho</span>
+            <span style="font-size: 11.5px; color: #FFE9C2; font-weight: 700;">★★★★★ nas avaliações da nossa comunidade</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin: 0; text-align: center; font-size: 14.5px; font-style: italic; font-weight: 700; color: #414B6E;">"A confiança das famílias é o nosso maior reconhecimento."</p>
+      <a href="https://instagram.com/crechefuturinho" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 800; color: #23305A;" style-hover="color: #E8622C;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex: 0 0 auto;"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"></circle><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"></circle></svg>
+        @crechefuturinho
+      </a>
+    </div>
+    <div data-reveal data-collapse style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-content: start; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <figure class="u4" style-hover="transform: translateY(-5px); box-shadow: 0 20px 40px -22px rgba(35,48,90,.35);">
+        <figcaption class="u18">
+          <span class="u32">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: #F27DA8; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px; color: #fff;">C</span>
+            <span class="u34">
+              <span class="u35">Camila</span>
+              <span class="u29">Mãe de aluna</span>
+            </span>
+          </span>
+          <a href="https://instagram.com/crechefuturinho" target="_blank" aria-label="Ver no Instagram" class="u9" style-hover="color: #E8622C; border-color: #E8622C;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2.4"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2.4"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg>
+          </a>
+        </figcaption>
+        <span aria-label="5 estrelas" class="u28">★★★★★</span>
+        <blockquote class="u23">"Minha filha chora quando não pode ir! É o melhor sinal que eu poderia ter 💛"</blockquote>
+      </figure>
+      <figure class="u4" style-hover="transform: translateY(-5px); box-shadow: 0 20px 40px -22px rgba(35,48,90,.35);">
+        <figcaption class="u18">
+          <span class="u32">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: #8B5CF6; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px; color: #fff;">A</span>
+            <span class="u34">
+              <span class="u35">Adriana</span>
+              <span class="u29">Mãe de aluno</span>
+            </span>
+          </span>
+          <a href="https://instagram.com/crechefuturinho" target="_blank" aria-label="Ver no Instagram" class="u9" style-hover="color: #E8622C; border-color: #E8622C;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2.4"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2.4"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg>
+          </a>
+        </figcaption>
+        <span aria-label="5 estrelas" class="u28">★★★★★</span>
+        <blockquote class="u23">"Equipe super dedicada e atenciosa. Me sinto segura deixando meu filho aqui todos os dias!"</blockquote>
+      </figure>
+      <figure class="u4" style-hover="transform: translateY(-5px); box-shadow: 0 20px 40px -22px rgba(35,48,90,.35);">
+        <figcaption class="u18">
+          <span class="u32">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: #2BC3D6; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px; color: #fff;">R</span>
+            <span class="u34">
+              <span class="u35">Renata</span>
+              <span class="u29">Responsável</span>
+            </span>
+          </span>
+          <a href="https://instagram.com/crechefuturinho" target="_blank" aria-label="Ver no Instagram" class="u9" style-hover="color: #E8622C; border-color: #E8622C;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2.4"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2.4"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg>
+          </a>
+        </figcaption>
+        <span aria-label="5 estrelas" class="u28">★★★★★</span>
+        <blockquote class="u23">"Ambiente lindo, limpo e cheio de carinho. Recomendo de olhos fechados para todas as famílias! 💗"</blockquote>
+      </figure>
+      <figure class="u4" style-hover="transform: translateY(-5px); box-shadow: 0 20px 40px -22px rgba(35,48,90,.35);">
+        <figcaption class="u18">
+          <span class="u32">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: #3DBE7B; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px; color: #fff;">M</span>
+            <span class="u34">
+              <span class="u35">Marcela</span>
+              <span class="u29">Mãe de aluna</span>
+            </span>
+          </span>
+          <a href="https://instagram.com/crechefuturinho" target="_blank" aria-label="Ver no Instagram" class="u9" style-hover="color: #E8622C; border-color: #E8622C;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2.4"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2.4"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg>
+          </a>
+        </figcaption>
+        <span aria-label="5 estrelas" class="u28">★★★★★</span>
+        <blockquote class="u23">"O desenvolvimento da minha filha deu um salto enorme desde que entrou no Futurinho. Profissionais incríveis!"</blockquote>
+      </figure>
+      <figure class="u4" style-hover="transform: translateY(-5px); box-shadow: 0 20px 40px -22px rgba(35,48,90,.35);">
+        <figcaption class="u18">
+          <span class="u32">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: #3B82F6; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px; color: #fff;">P</span>
+            <span class="u34">
+              <span class="u35">Patricia</span>
+              <span class="u29">Responsável</span>
+            </span>
+          </span>
+          <a href="https://instagram.com/crechefuturinho" target="_blank" aria-label="Ver no Instagram" class="u9" style-hover="color: #E8622C; border-color: #E8622C;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2.4"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2.4"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg>
+          </a>
+        </figcaption>
+        <span aria-label="5 estrelas" class="u28">★★★★★</span>
+        <blockquote class="u23">"Confio 100% na equipe. Meu filho chegou tímido e hoje não quer ir embora. Gratidão enorme! 🚀"</blockquote>
+      </figure>
+    </div>
+  </div>
+</section>
+<section id="faq" data-screen-label="FAQ" style="padding: 40px 24px 56px;">
+  <div style="max-width: 760px; margin: 0 auto;">
+    <div data-reveal style="text-align: center; display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span class="u6">Perguntas frequentes</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0;">Tudo o que você precisa saber</h2>
+    </div>
+    <div data-reveal style="display: flex; flex-direction: column; gap: 12px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          Quais idades a creche atende?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">Atendemos crianças do Berçário ao Pré 2, com turmas organizadas por faixa etária e pensadas para cada fase do desenvolvimento.</p>
+        </div>
+      </div>
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          Qual é o horário de funcionamento?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">Funcionamos de segunda a sexta, das 7h às 19h — com flexibilidade para a rotina de quem trabalha o dia inteiro.</p>
+        </div>
+      </div>
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          A creche oferece alimentação?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">Sim! Todas as refeições são planejadas por nutricionista, com cardápios balanceados e adaptados à idade de cada criança.</p>
+        </div>
+      </div>
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          Como funciona o período de adaptação?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">A adaptação é gradual e acompanhada de perto pela equipe, respeitando o ritmo da criança e da família. Cada caso é conversado individualmente.</p>
+        </div>
+      </div>
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          Posso agendar uma visita?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">Claro! Preencha o formulário abaixo ou chame no WhatsApp. Vamos adorar mostrar cada cantinho da Futurinho para você.</p>
+        </div>
+      </div>
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          Como recebo informações sobre a rotina do meu filho?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">Mantemos comunicação próxima e constante com os responsáveis, com atualizações sobre alimentação, sono e atividades do dia.</p>
+        </div>
+      </div>
+      <div class="u12">
+        <button class="js-faq-toggle u0">
+          Ainda há vagas disponíveis?
+          <span data-chev class="u2">▾</span>
+        </button>
+        <div data-faq-panel class="u17">
+          <p class="u11">As matrículas estão abertas! Como as turmas são reduzidas, recomendamos agendar sua visita o quanto antes para garantir a vaga.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="matricula" data-screen-label="Matrícula e localização" style="padding: 40px 24px 96px;">
+  <div id="fut-conv-card" data-reveal style="max-width: 1160px; margin: 0 auto; background: #FFF3DF; border-radius: 36px; padding: 64px 56px; position: relative; overflow: hidden; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <div style="position: absolute; top: -70px; right: -70px; width: 220px; height: 220px; border-radius: 50%; background: #FFE29B;"></div>
+    <div id="fut-conv-grid" style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
+      <div id="localizacao" class="u49">
+        <span class="u6">Matrícula</span>
+        <h2 class="u16">Agende sua visita e conheça a Futurinho de perto</h2>
+        <p class="u37">Preencha o formulário e a mensagem chega direto no nosso WhatsApp. Respondemos no melhor horário para você — sem compromisso.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 700; color: #23305A;">
+          <span class="u42"><span style="color: #4BAE6B;">✓</span> Atendimento humano e cuidadoso</span>
+          <span class="u42"><span style="color: #4BAE6B;">✓</span> Respondemos em até 24h úteis</span>
+          <span class="u42"><span style="color: #4BAE6B;">✓</span> Rua Engenheiro Adel, 43 — Tijuca, RJ · Seg a sex, 7h às 19h</span>
+        </div>
+        <div style="position: relative; border-radius: 22px; overflow: hidden; border: 4px solid #fff; box-shadow: 0 16px 40px -22px rgba(35,48,90,.35); aspect-ratio: 16/10;">
+          <iframe title="Mapa da Creche Escola Futurinho na Tijuca" src="https://www.google.com/maps?q=Rua+Engenheiro+Adel+43+Tijuca+Rio+de+Janeiro&output=embed" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Engenheiro+Adel+43+Tijuca+Rio+de+Janeiro" target="_blank" class="u33" style-hover="border-color: #E8622C; color: #23305A;">Como chegar →</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Engenheiro+Adel+43+Tijuca+Rio+de+Janeiro" target="_blank" class="u33" style-hover="border-color: #E8622C; color: #23305A;">Ver no Google Maps</a>
+        </div>
+      </div>
+      <form id="fut-form" style="position: relative; background: #fff; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 50px -24px rgba(35,48,90,.3);">
+        <div data-collapse class="u47">
+          <input id="f-resp" placeholder="Nome do responsável *" class="u14" style-focus="border-color: #FFC53D;">
+          <input id="f-crianca" placeholder="Nome da criança" class="u14" style-focus="border-color: #FFC53D;">
+        </div>
+        <div data-collapse class="u47">
+          <select id="f-idade" class="u26">
+            <option value="">Idade da criança *</option>
+            <option>Menos de 1 ano</option>
+            <option>1 ano</option>
+            <option>2 anos</option>
+            <option>3 anos</option>
+            <option>4 anos</option>
+            <option>5 anos</option>
+          </select>
+          <select id="f-horario" class="u26">
+            <option value="">Melhor horário p/ contato</option>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Fim do dia</option>
+          </select>
+        </div>
+        <input id="f-tel" type="tel" placeholder="Seu telefone / WhatsApp com DDD *" class="u14" style-focus="border-color: #FFC53D;">
+        <textarea id="f-msg" rows="3" placeholder="Mensagem (opcional)" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 16px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; resize: vertical; width: 100%; box-sizing: border-box;" style-focus="border-color: #FFC53D;"></textarea>
+        <p id="f-error" role="alert" style="display: none; margin: 0; background: #FDECEC; color: #A83232; border-radius: 12px; padding: 11px 14px; font-size: 14px; font-weight: 700; line-height: 1.5;"></p>
+        <button type="submit" data-cta="bg" style="background: #E8622C; color: #fff; border: none; border-radius: 999px; padding: 16px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 17px; cursor: pointer; box-shadow: 0 4px 0 rgba(35,48,90,.2); transition: transform .15s ease;" style-hover="transform: translateY(-2px);">Enviar e falar no WhatsApp</button>
+        <p style="margin: 0; text-align: center; font-size: 13px; color: #5F6885; font-weight: 700;">Ao enviar, você será direcionado ao nosso WhatsApp</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer data-screen-label="Rodapé" style="background: #23305A; color: #fff; padding: 64px 24px 32px;">
+  <div data-collapse style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px;">
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: center;">
+        <span class="futlogo dark big" role="img" aria-label="Creche Escola Futurinho"><em>Creche Escola</em><b aria-hidden="true"><span style="color:#008CE4">F</span><span style="color:#FF893B">U</span><span style="color:#6FD087">T</span><span style="color:#A170EB">U</span><span style="color:#FF8FB4">R</span><span style="color:#3ACED6">I</span><span style="color:#FF893B">N</span><span style="color:#008CE4">H</span><span style="color:#6FD087">O</span></b></span>
+      </div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #B8C4E8; max-width: 340px;">Cuidamos, ensinamos e acolhemos cada criança com a atenção que ela merece. Um lugar para crescer feliz.</p>
+    </div>
+    <div class="u45">
+      <span class="u44">Contato</span>
+      <span style="color: #B8C4E8;">Rua Engenheiro Adel, 43 — Tijuca, Rio de Janeiro</span>
+      <a href="#" class="js-wa-link u52" target="_blank" style-hover="color: #FFC53D;">WhatsApp: +55 21 96620-3740</a>
+      <a href="https://instagram.com/crechefuturinho" target="_blank" class="u52" style-hover="color: #FFC53D;">@crechefuturinho</a>
+    </div>
+    <div class="u45">
+      <span class="u44">Funcionamento</span>
+      <span style="color: #B8C4E8;">Segunda a sexta, das 7h às 19h</span>
+      <a href="#matricula" style="align-self: flex-start; margin-top: 6px; background: #FFC53D; color: #23305A; font-weight: 800; padding: 10px 22px; border-radius: 999px;" style-hover="color: #23305A;">Agendar visita</a>
+    </div>
+  </div>
+  <p style="max-width: 1160px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px; color: #8B93AD; font-weight: 700;">© 2026 Creche Escola Futurinho. Todos os direitos reservados.</p>
+</footer>
+<a href="#" class="js-wa-link" target="_blank" aria-label="Falar com a creche no WhatsApp" style="position: fixed; bottom: 22px; right: 22px; z-index: 60; display: inline-flex; align-items: center; gap: 10px; background: #4BAE6B; color: #fff; font-weight: 800; font-size: 15px; padding: 14px 20px; border-radius: 999px; box-shadow: 0 12px 30px -8px rgba(35,48,90,.45); transition: transform .2s ease;" style-hover="transform: scale(1.06); color: #fff;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" style="flex: 0 0 auto;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.19 0 4.25.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.71c0 4.48-3.65 8.12-8.13 8.12h-.01a8.1 8.1 0 0 1-4.1-1.12l-.29-.17-3.11.82.83-3.03-.19-.31a8.09 8.09 0 0 1-1.24-4.32c.01-4.48 3.65-8.1 8.13-8.1m4.47 11.61c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.29.37-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.71 2.6 4.14 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.09.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28"></path></svg>
+  Falar no WhatsApp
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

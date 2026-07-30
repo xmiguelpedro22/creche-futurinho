@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#FFC53D"></rect>
+    <text x="50" y="66" font-family="'Fredoka', sans-serif" font-size="52" font-weight="700" fill="#23305A" text-anchor="middle">F</text>
+  </svg>
+</template>
+<helmet>
+  <title>Creche Escola Futurinho — Creche na Tijuca, Rio de Janeiro</title>
+  <meta name="description" content="Creche e escola infantil na Tijuca, RJ. Do Berçário ao Pré 2, das 7h às 19h, com nutricionista própria, projeto bilíngue e ambiente monitorado. Agende uma visita.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <script>document.documentElement.setAttribute('lang', 'pt-BR'); if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "ChildCare",
+    "name": "Creche Escola Futurinho",
+    "description": "Creche e escola infantil na Tijuca, RJ. Do Berçário ao Pré 2, das 7h às 19h.",
+    "address": { "@type": "PostalAddress", "streetAddress": "Rua Engenheiro Adel, 43", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR" },
+    "telephone": "+55-21-96620-3740",
+    "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "19:00" }],
+    "areaServed": "Tijuca, Rio de Janeiro",
+    "sameAs": ["https://instagram.com/crechefuturinho"]
+  }</script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #FFF9F0; color: #23305A; font-family: 'Nunito', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #E8622C; text-decoration: none; }
+    a:hover { color: #C94F1F; }
+    ::selection { background: #FFE29B; }
+    @keyframes fut-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes fut-float2 { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+    @keyframes fut-pulse { 0%,100% { transform: scale(1); opacity: .5; } 50% { transform: scale(1.25); opacity: .15; } }
+    #fut-burger { display: none; }
+    [data-revealed] { opacity: 1 !important; transform: none !important; }
+    @media (max-width: 900px) {
+      #fut-links { display: none !important; }
+      #fut-burger { display: grid !important; }
+      #fut-hero-grid, #fut-saude-grid, #fut-espacos-grid, #fut-ativ-grid, #fut-paraquem-grid, #fut-depo-grid, #fut-conv-grid { grid-template-columns: 1fr !important; }
+      #fut-feat-grid, #fut-rotina-grid, #fut-equipe-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      #fut-social-strip { flex-direction: column !important; gap: 8px !important; }
+      #fut-h1 { font-size: 38px !important; }
+      #fut-conv-card, #fut-saude-card { padding: 32px 24px !important; }
+      #fut-paraquem-left { position: static !important; }
+    }
+    @media (max-width: 560px) {
+      #fut-feat-grid, #fut-rotina-grid, #fut-equipe-grid, [data-collapse] { grid-template-columns: 1fr !important; }
+      #fut-h1 { font-size: 32px !important; }
+    }
+  </style>
+</helmet>
+
+<!-- ══════════ NAV ══════════ -->
+<header id="fut-nav" data-screen-label="Navegação" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s ease, box-shadow .3s ease; background: rgba(255,249,240,0);">
+  <nav style="max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px;">
+    <a href="#inicio" onClick="{{ closeMenu }}" style="display: flex; align-items: center; flex: 0 0 auto;">
+      <img src="assets/logo-futurinho.png" alt="Creche Escola Futurinho" style="height: 46px; width: auto; display: block;">
+    </a>
+    <div id="fut-links" style="display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 700;">
+      <a href="#sobre" style="color: #23305A;" style-hover="color: #E8622C;">Sobre</a>
+      <a href="#saude" style="color: #23305A;" style-hover="color: #E8622C;">Saúde</a>
+      <a href="#espacos" style="color: #23305A;" style-hover="color: #E8622C;">Espaços</a>
+      <a href="#rotina" style="color: #23305A;" style-hover="color: #E8622C;">Rotina</a>
+      <a href="#depoimentos" style="color: #23305A;" style-hover="color: #E8622C;">Depoimentos</a>
+      <a href="#faq" style="color: #23305A;" style-hover="color: #E8622C;">Dúvidas</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto;">
+      <a href="#matricula" data-cta="bg" onClick="{{ closeMenu }}" style="background: #E8622C; color: #fff; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 999px; box-shadow: 0 3px 0 rgba(35,48,90,.18); transition: transform .15s ease; white-space: nowrap;" style-hover="transform: translateY(-2px); color: #fff;">Agendar visita</a>
+      <button id="fut-burger" onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="width: 44px; height: 44px; border: 2px solid #DCE3F2; border-radius: 14px; background: #fff; cursor: pointer; place-items: center; color: #23305A;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </nav>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="background: #FFF9F0; border-top: 1px solid #F0E6D6; box-shadow: 0 20px 30px -18px rgba(35,48,90,.3); display: flex; flex-direction: column; padding: 8px 24px 18px;">
+      <a href="#sobre" onClick="{{ closeMenu }}" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px; border-bottom: 1px solid #F0E6D6;">Sobre</a>
+      <a href="#saude" onClick="{{ closeMenu }}" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px; border-bottom: 1px solid #F0E6D6;">Saúde</a>
+      <a href="#espacos" onClick="{{ closeMenu }}" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px; border-bottom: 1px solid #F0E6D6;">Espaços</a>
+      <a href="#rotina" onClick="{{ closeMenu }}" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px; border-bottom: 1px solid #F0E6D6;">Rotina</a>
+      <a href="#depoimentos" onClick="{{ closeMenu }}" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px; border-bottom: 1px solid #F0E6D6;">Depoimentos</a>
+      <a href="#faq" onClick="{{ closeMenu }}" style="color: #23305A; font-size: 17px; font-weight: 700; padding: 13px 4px;">Dúvidas</a>
+    </div>
+  </sc-if>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="inicio" data-screen-label="Hero" style="position: relative; overflow: hidden; padding: 140px 24px 64px;">
+  <div style="position: absolute; top: -120px; right: -120px; width: 420px; height: 420px; border-radius: 50%; background: #FFE9C2;"></div>
+  <div style="position: absolute; bottom: -80px; left: -100px; width: 300px; height: 300px; border-radius: 50%; background: #EAF1FF;"></div>
+  <div id="fut-hero-grid" style="position: relative; max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <sc-if value="{{ enrollmentOpen }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex;">
+          <span style="display: inline-flex; align-items: center; gap: 8px; background: #FFF; border: 2px solid #FFC53D; border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 800;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #4BAE6B;"></span>
+            Matrículas abertas · Berçário ao Pré 2
+          </span>
+        </div>
+      </sc-if>
+      <h1 id="fut-h1" style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 50px; line-height: 1.12; margin: 0; text-wrap: pretty;">
+        Creche na Tijuca onde seu filho é cuidado
+        <span style="position: relative; display: inline-block; white-space: nowrap;">
+          <span style="position: absolute; left: -4px; right: -4px; bottom: 4px; height: 38%; background: #FFC53D; border-radius: 6px; z-index: 0;"></span>
+          <span style="position: relative; z-index: 1;">como em casa</span>
+        </span>
+      </h1>
+      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #414B6E; max-width: 480px;">Do Berçário ao Pré 2, das 7h às 19h. Equipe preparada, ambiente monitorado e nutricionista própria — para você trabalhar tranquilo sabendo que ele está bem.</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="#matricula" data-cta="bg" style="background: #E8622C; color: #fff; font-weight: 800; font-size: 17px; padding: 15px 28px; border-radius: 999px; box-shadow: 0 4px 0 rgba(35,48,90,.2); transition: transform .15s ease;" style-hover="transform: translateY(-3px); color: #fff;">Agendar uma visita</a>
+        <a href="{{ waLink }}" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 2px solid #DCE3F2; color: #23305A; font-weight: 800; font-size: 17px; padding: 13px 24px; border-radius: 999px; transition: border-color .15s ease, transform .15s ease;" style-hover="border-color: #4BAE6B; transform: translateY(-3px); color: #23305A;">
+          <span style="width: 22px; height: 22px; border-radius: 50%; background: #4BAE6B; display: grid; place-items: center; flex: 0 0 auto;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.19 0 4.25.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.71c0 4.48-3.65 8.12-8.13 8.12h-.01a8.1 8.1 0 0 1-4.1-1.12l-.29-.17-3.11.82.83-3.03-.19-.31a8.09 8.09 0 0 1-1.24-4.32c.01-4.48 3.65-8.1 8.13-8.1m4.47 11.61c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.29.37-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.71 2.6 4.14 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.09.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28"></path></svg>
+          </span>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div style="display: flex; gap: 22px; flex-wrap: wrap; margin-top: 6px; font-size: 14px; font-weight: 700; color: #414B6E;">
+        <span style="display: flex; align-items: center; gap: 7px;"><span style="color: #E8A81E;">●</span> Ambiente monitorado</span>
+        <span style="display: flex; align-items: center; gap: 7px;"><span style="color: #E8622C;">●</span> Nutricionista própria</span>
+        <span style="display: flex; align-items: center; gap: 7px;"><span style="color: #4A7DE0;">●</span> Projeto bilíngue</span>
+      </div>
+    </div>
+    <div style="position: relative;">
+      <img src="https://futurinho-landing-page.vercel.app/assets/hero-kids-DXMix_MF.jpg" alt="Crianças brincando felizes na Creche Escola Futurinho" style="width: 100%; aspect-ratio: 4/4.4; object-fit: cover; border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; border: 6px solid #fff; box-shadow: 0 24px 60px -24px rgba(35,48,90,.35); display: block;">
+      <div style="position: absolute; top: 24px; left: -26px; background: #fff; border-radius: 18px; padding: 12px 18px; box-shadow: 0 12px 30px -12px rgba(35,48,90,.3); animation: fut-float 5s ease-in-out infinite;">
+        <div style="font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 26px; color: #E8622C;"><span id="fut-counter">+200</span></div>
+        <div style="font-size: 13px; font-weight: 700; color: #414B6E;">famílias atendidas</div>
+      </div>
+      <div style="position: absolute; bottom: 36px; right: -18px; background: #23305A; color: #fff; border-radius: 18px; padding: 12px 18px; box-shadow: 0 12px 30px -12px rgba(35,48,90,.4); animation: fut-float2 6s ease-in-out infinite;">
+        <div style="font-size: 13px; font-weight: 700; color: #B8C4E8;">Seg a sex</div>
+        <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px;">7h às 19h</div>
+      </div>
+      <div style="position: absolute; top: -14px; right: 40px; width: 44px; height: 44px; border-radius: 50%; background: #FFC53D; animation: fut-pulse 4s ease-in-out infinite;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROVA SOCIAL ══════════ -->
+<div data-screen-label="Prova social" style="background: #23305A; padding: 18px 24px;">
+  <div id="fut-social-strip" style="max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
+    <span style="display: flex; align-items: center; gap: 10px; color: #fff; font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 17px;"><span style="color: #FFC53D;">✦</span> +200 famílias atendidas</span>
+    <span style="display: flex; align-items: center; gap: 10px; color: #fff; font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 17px;"><span style="color: #FFC53D;">★</span> Avaliação 5★ das famílias</span>
+    <span style="display: flex; align-items: center; gap: 10px; color: #fff; font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 17px;"><span style="color: #FFC53D;">✦</span> Aberto de seg a sex, 7h às 19h</span>
+  </div>
+</div>
+
+<!-- ══════════ SOBRE ══════════ -->
+<section id="sobre" data-screen-label="Sobre" style="padding: 96px 24px 40px;">
+  <div data-reveal style="max-width: 820px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 20px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Quem somos</span>
+    <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 38px; line-height: 1.2; margin: 0; text-wrap: pretty;">Escolher uma creche é uma das decisões mais importantes da sua vida. <span style="color: #E8622C;">A gente sabe disso.</span></h2>
+    <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #414B6E;">Por isso, oferecemos um ambiente preparado para acolher, cuidar e estimular cada criança com responsabilidade e carinho — para que pais e mães possam trabalhar tranquilos, sabendo que seu filho está em boas mãos.</p>
+  </div>
+</section>
+
+<!-- ══════════ DIFERENCIAIS ══════════ -->
+<section id="diferenciais" data-screen-label="Diferenciais" style="padding: 56px 24px;">
+  <div style="max-width: 1160px; margin: 0 auto;">
+    <div data-reveal style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Nossos diferenciais</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; max-width: 560px; text-wrap: pretty;">Tudo o que importa para o desenvolvimento do seu filho</h2>
+    </div>
+    <div id="fut-feat-grid" data-reveal style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <sc-for list="{{ features }}" as="f" hint-placeholder-count="6">
+        <div style="background: #fff; border: 1px solid #F0E6D6; border-radius: 22px; padding: 24px 22px; display: flex; flex-direction: column; gap: 12px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+          <span style="width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; background: {{ f.bg }};">{{ f.icon }}</span>
+          <h3 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 18px; margin: 0;">{{ f.title }}</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #414B6E;">{{ f.text }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SAÚDE ESCOLAR ══════════ -->
+<section id="saude" data-screen-label="Saúde escolar" style="padding: 56px 24px;">
+  <div id="fut-saude-card" data-reveal style="max-width: 1160px; margin: 0 auto; background: #fff; border: 1px solid #F0E6D6; border-radius: 32px; padding: 56px; box-shadow: 0 20px 50px -30px rgba(35,48,90,.25); opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <div id="fut-saude-grid" style="display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Saúde escolar</span>
+        <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.15; margin: 0; text-wrap: pretty;">Se algo acontecer, seu filho é atendido na hora</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #414B6E;">Nossa equipe é treinada em primeiros socorros e seguimos protocolos claros para alergias e situações de emergência — com apoio do plano de saúde escolar em parceria com a Villas Boas.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; font-weight: 700; color: #23305A;"><span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #FFE9C2; display: grid; place-items: center; font-size: 16px;">🩺</span> Atendimento preventivo e triagens periódicas</span>
+          <span style="display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; font-weight: 700; color: #23305A;"><span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #EAF1FF; display: grid; place-items: center; font-size: 16px;">💻</span> Consultas on-line e teleorientação de emergência</span>
+          <span style="display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; font-weight: 700; color: #23305A;"><span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #FFE0D1; display: grid; place-items: center; font-size: 16px;">⛑️</span> Treinamento de primeiros socorros para a equipe escolar</span>
+          <span style="display: flex; align-items: flex-start; gap: 12px; font-size: 15.5px; font-weight: 700; color: #23305A;"><span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 12px; background: #FFE9C2; display: grid; place-items: center; font-size: 16px;">🛡️</span> Protocolos para gestão de surtos e alergias</span>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; background: #FFF9F0; border: 1px solid #F0E6D6; border-radius: 26px; padding: 44px 32px;">
+        <img src="assets/villasboas-logo.png" alt="Villas Boas" loading="lazy" style="width: 200px; max-width: 100%; display: block;">
+        <p style="margin: 0; text-align: center; font-size: 14.5px; line-height: 1.6; color: #414B6E; font-weight: 700;">Plano de saúde escolar em parceria com a <strong style="color: #23305A;">Villas Boas</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ESPAÇOS ══════════ -->
+<section id="espacos" data-screen-label="Espaços" style="padding: 56px 24px; background: #FFF3DF;">
+  <div id="fut-espacos-grid" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center;">
+    <div data-reveal style="display: flex; flex-direction: column; gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Nossa estrutura</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; text-wrap: pretty;">Um espaço pensado em cada detalhe</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #414B6E;">Salas organizadas, espaço para brincar, área de descanso, refeitório e banheiros adaptados — tudo limpo, seguro e visualmente calmo.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px;" role="tablist">
+        <button data-space="0" onClick="{{ pickSpace }}" style="display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid #E8622C; border-radius: 16px; padding: 14px 18px; cursor: pointer; font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: #23305A; transition: border-color .2s ease;">🏡 Pátio — espaço amplo para brincadeiras</button>
+        <button data-space="1" onClick="{{ pickSpace }}" style="display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid transparent; border-radius: 16px; padding: 14px 18px; cursor: pointer; font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: #23305A; transition: border-color .2s ease;">🍼 Berçário — aconchegante e seguro</button>
+        <button data-space="2" onClick="{{ pickSpace }}" style="display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid transparent; border-radius: 16px; padding: 14px 18px; cursor: pointer; font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: #23305A; transition: border-color .2s ease;">✏️ Sala de aula — iluminada e organizada</button>
+      </div>
+    </div>
+    <div data-reveal style="position: relative; aspect-ratio: 16/11.5; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <img data-space-img="0" src="https://futurinho-landing-page.vercel.app/assets/patio-1uwXB6Fq.jpg" alt="Pátio da Creche Escola Futurinho" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 28px; border: 6px solid #fff; box-shadow: 0 20px 50px -20px rgba(35,48,90,.35); opacity: 1; transition: opacity .5s ease;">
+      <img data-space-img="1" src="assets/bercario-800.jpg" alt="Berçário da Creche Escola Futurinho" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 28px; border: 6px solid #fff; box-shadow: 0 20px 50px -20px rgba(35,48,90,.35); opacity: 0; transition: opacity .5s ease;">
+      <img data-space-img="2" src="https://futurinho-landing-page.vercel.app/assets/sala-de-aula-ClVBdCv-.jpg" alt="Sala de aula da Creche Escola Futurinho" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 28px; border: 6px solid #fff; box-shadow: 0 20px 50px -20px rgba(35,48,90,.35); opacity: 0; transition: opacity .5s ease;">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ROTINA ══════════ -->
+<section id="rotina" data-screen-label="Rotina" style="padding: 96px 24px 40px; overflow: hidden;">
+  <div style="max-width: 1160px; margin: 0 auto;">
+    <div data-reveal style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 44px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Um dia na Futurinho</span>
+        <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; max-width: 520px; text-wrap: pretty;">Uma rotina cuidadosa, lúdica e cheia de aprendizado</h2>
+      </div>
+      <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #414B6E; max-width: 360px;">Cada atividade é planejada respeitando o tempo e a individualidade de cada criança.</p>
+    </div>
+  </div>
+  <div id="fut-rotina-grid" data-reveal style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+    <sc-for list="{{ routine }}" as="r" hint-placeholder-count="8">
+      <div style="background: #fff; border: 1px solid #F0E6D6; border-radius: 24px; padding: 26px 24px; display: flex; flex-direction: column; gap: 12px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-6px); box-shadow: 0 16px 34px -18px rgba(35,48,90,.28);">
+        <span style="width: 52px; height: 52px; border-radius: 18px; background: {{ r.bg }}; display: grid; place-items: center; font-size: 26px;">{{ r.icon }}</span>
+        <h3 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 19px; margin: 0;">{{ r.title }}</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #414B6E;">{{ r.text }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ══════════ ATIVIDADES EXTRAS ══════════ -->
+<section id="atividades" data-screen-label="Atividades extras" style="padding: 80px 24px; background: #23305A; color: #fff; margin-top: 56px;">
+  <div id="fut-ativ-grid" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+    <div data-reveal style="position: relative; aspect-ratio: 4/4.2; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <img data-act-img="0" src="https://futurinho-landing-page.vercel.app/assets/ballet-ByC_3Y_W.jpg" alt="Crianças praticando ballet" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 45% 55% 50% 50% / 48% 48% 52% 52%; border: 6px solid rgba(255,255,255,.15); opacity: 1; transition: opacity .5s ease;">
+      <img data-act-img="1" src="https://futurinho-landing-page.vercel.app/assets/capoeira-BQIJf0zw.jpg" alt="Crianças praticando capoeira" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 45% 55% 50% 50% / 48% 48% 52% 52%; border: 6px solid rgba(255,255,255,.15); opacity: 0; transition: opacity .5s ease;">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #FFC53D;">Atividades extras</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; text-wrap: pretty;">Muito além da sala de aula</h2>
+      <div style="display: flex; gap: 12px;">
+        <button data-act="0" onClick="{{ pickActivity }}" style="background: #FFC53D; color: #23305A; border: none; border-radius: 999px; padding: 12px 26px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; cursor: pointer; transition: background .2s ease, color .2s ease;">🩰 Ballet</button>
+        <button data-act="1" onClick="{{ pickActivity }}" style="background: rgba(255,255,255,.1); color: #fff; border: none; border-radius: 999px; padding: 12px 26px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; cursor: pointer; transition: background .2s ease, color .2s ease;">🥋 Capoeira</button>
+      </div>
+      <div data-act-panel="0" style="display: flex; flex-direction: column; gap: 14px;">
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #C8D2EE;">Graça, ritmo e expressão: aulas de ballet que desenvolvem coordenação, postura e expressão corporal de forma lúdica e divertida.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;">Coordenação motora</span>
+          <span style="background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;">Postura e equilíbrio</span>
+          <span style="background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;">Expressão artística</span>
+        </div>
+      </div>
+      <div data-act-panel="1" style="display: none; flex-direction: column; gap: 14px;">
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #C8D2EE;">Ritmo, cultura e movimento: a capoeira trabalha o corpo inteiro e apresenta às crianças uma tradição brasileira cheia de música.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;">Ritmo e musicalidade</span>
+          <span style="background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;">Agilidade e força</span>
+          <span style="background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 16px; font-size: 14px; font-weight: 700;">Cultura brasileira</span>
+        </div>
+      </div>
+      <a href="#matricula" style="align-self: flex-start; color: #FFC53D; font-weight: 800; font-size: 16px; border-bottom: 2px solid #FFC53D; padding-bottom: 2px;" style-hover="color: #FFD76B;">Quero saber mais →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PARA QUEM ══════════ -->
+<section id="paraquem" data-screen-label="Para quem" style="padding: 56px 24px;">
+  <div id="fut-paraquem-grid" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
+    <div id="fut-paraquem-left" data-reveal style="position: sticky; top: 110px; display: flex; flex-direction: column; gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Para quem é</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; text-wrap: pretty;">Feita para famílias que querem o melhor — sem abrir mão da rotina.</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #414B6E;">Atendemos crianças do <strong>Berçário ao Pré 2</strong>, com turmas pensadas para cada fase de desenvolvimento, respeitando o tempo e as conquistas de cada uma.</p>
+    </div>
+    <div data-reveal style="display: flex; flex-direction: column; gap: 14px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <sc-for list="{{ audience }}" as="a" hint-placeholder-count="5">
+        <div style="display: flex; align-items: center; gap: 18px; background: #fff; border: 1px solid #F0E6D6; border-radius: 20px; padding: 20px 24px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateX(8px); box-shadow: 0 12px 28px -16px rgba(35,48,90,.25);">
+          <span style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 14px; background: {{ a.bg }}; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px;">{{ a.n }}</span>
+          <p style="margin: 0; font-size: 16.5px; font-weight: 700; line-height: 1.5;">{{ a.text }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DEPOIMENTOS ══════════ -->
+<section id="depoimentos" data-screen-label="Depoimentos" style="padding: 56px 0 96px; overflow: hidden;">
+  <div data-reveal style="max-width: 820px; margin: 0 auto 44px; text-align: center; display: flex; flex-direction: column; gap: 10px; padding: 0 24px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Quem confia, recomenda</span>
+    <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; text-wrap: pretty;">O que as famílias dizem sobre nós</h2>
+    <p style="margin: 0; font-size: 16px; color: #414B6E;">Comentários de famílias no <a href="https://www.instagram.com/crechefuturinho" target="_blank" style="font-weight: 800;">@crechefuturinho</a></p>
+  </div>
+  <div id="fut-depo-grid" style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 320px 1fr; gap: 56px; align-items: start;">
+    <div data-reveal style="display: flex; flex-direction: column; align-items: center; gap: 18px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <div style="width: 280px; background: #23305A; border-radius: 40px; padding: 12px; box-shadow: 0 24px 60px -24px rgba(35,48,90,.45);">
+        <div style="background: #fff; border-radius: 30px; overflow: hidden; position: relative;">
+          <span style="position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 2; width: 92px; height: 22px; background: #23305A; border-radius: 999px;"></span>
+          <img src="assets/ig-print-560.png" alt="Comentários reais de famílias no Instagram @crechefuturinho" loading="lazy" style="width: 100%; display: block;">
+        </div>
+      </div>
+      <p style="margin: 0; text-align: center; font-size: 14.5px; font-style: italic; font-weight: 700; color: #414B6E;">“A confiança das famílias é o nosso maior reconhecimento.”</p>
+      <a href="https://instagram.com/crechefuturinho" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 800; color: #23305A;" style-hover="color: #E8622C;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex: 0 0 auto;"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"></circle><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"></circle></svg>
+        @crechefuturinho
+      </a>
+    </div>
+    <div data-reveal data-collapse style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-content: start; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="5">
+        <figure style="margin: 0; background: #fff; border-radius: 22px; padding: 24px 26px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 14px 34px -22px rgba(35,48,90,.28); transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-5px); box-shadow: 0 20px 40px -22px rgba(35,48,90,.35);">
+          <figcaption style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+            <span style="display: flex; align-items: center; gap: 12px;">
+              <span style="width: 42px; height: 42px; border-radius: 50%; background: {{ t.bg }}; display: grid; place-items: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 17px; color: #fff;">{{ t.initial }}</span>
+              <span style="display: flex; flex-direction: column;">
+                <span style="font-weight: 800; font-size: 15.5px;">{{ t.name }}</span>
+                <span style="font-size: 13px; color: #5F6885; font-weight: 700;">{{ t.role }}</span>
+              </span>
+            </span>
+            <a href="https://instagram.com/crechefuturinho" target="_blank" aria-label="Ver no Instagram" style="flex: 0 0 auto; width: 26px; height: 26px; border-radius: 8px; border: 2px solid #F27DA8; color: #F27DA8; display: grid; place-items: center;" style-hover="color: #E8622C; border-color: #E8622C;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="2.4"></rect><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2.4"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg>
+            </a>
+          </figcaption>
+          <span aria-label="5 estrelas" style="color: #FFC53D; font-size: 15px; letter-spacing: 3px;">★★★★★</span>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #23305A;">"{{ t.quote }}"</blockquote>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" data-screen-label="FAQ" style="padding: 40px 24px 56px;">
+  <div style="max-width: 760px; margin: 0 auto;">
+    <div data-reveal style="text-align: center; display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Perguntas frequentes</span>
+      <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0;">Tudo o que você precisa saber</h2>
+    </div>
+    <div data-reveal style="display: flex; flex-direction: column; gap: 12px; opacity: 0; transform: translateY(24px); transition: opacity .7s ease .1s, transform .7s ease .1s;">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="7">
+        <div style="background: #fff; border: 1px solid #F0E6D6; border-radius: 18px; overflow: hidden;">
+          <button onClick="{{ toggleFaq }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: none; padding: 20px 24px; cursor: pointer; text-align: left; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 18px; color: #23305A;">
+            {{ q.q }}
+            <span data-chev style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #FFF3DF; display: grid; place-items: center; font-size: 14px; transition: transform .3s ease;">▾</span>
+          </button>
+          <div data-faq-panel style="max-height: 0; overflow: hidden; transition: max-height .35s ease;">
+            <p style="margin: 0; padding: 0 24px 22px; font-size: 15.5px; line-height: 1.7; color: #414B6E;">{{ q.a }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MATRÍCULA + LOCALIZAÇÃO ══════════ -->
+<section id="matricula" data-screen-label="Matrícula e localização" style="padding: 40px 24px 96px;">
+  <div id="fut-conv-card" data-reveal style="max-width: 1160px; margin: 0 auto; background: #FFF3DF; border-radius: 36px; padding: 64px 56px; position: relative; overflow: hidden; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease;">
+    <div style="position: absolute; top: -70px; right: -70px; width: 220px; height: 220px; border-radius: 50%; background: #FFE29B;"></div>
+    <div id="fut-conv-grid" style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
+      <div id="localizacao" style="display: flex; flex-direction: column; gap: 18px;">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #E8622C;">Matrícula</span>
+        <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 36px; margin: 0; text-wrap: pretty;">Agende sua visita e conheça a Futurinho de perto</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #414B6E;">Preencha o formulário e a mensagem chega direto no nosso WhatsApp. Respondemos no melhor horário para você — sem compromisso.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 700; color: #23305A;">
+          <span style="display: flex; align-items: center; gap: 10px;"><span style="color: #4BAE6B;">✓</span> Atendimento humano e cuidadoso</span>
+          <span style="display: flex; align-items: center; gap: 10px;"><span style="color: #4BAE6B;">✓</span> Respondemos em até 24h úteis</span>
+          <span style="display: flex; align-items: center; gap: 10px;"><span style="color: #4BAE6B;">✓</span> Rua Engenheiro Adel, 43 — Tijuca, RJ · Seg a sex, 7h às 19h</span>
+        </div>
+        <div style="position: relative; border-radius: 22px; overflow: hidden; border: 4px solid #fff; box-shadow: 0 16px 40px -22px rgba(35,48,90,.35); aspect-ratio: 16/10;">
+          <iframe title="Mapa da Creche Escola Futurinho na Tijuca" src="https://www.google.com/maps?q=Rua+Engenheiro+Adel+43+Tijuca+Rio+de+Janeiro&output=embed" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Engenheiro+Adel+43+Tijuca+Rio+de+Janeiro" target="_blank" style="background: #fff; border: 2px solid #DCE3F2; color: #23305A; font-weight: 800; font-size: 15px; padding: 10px 20px; border-radius: 999px; transition: border-color .15s ease;" style-hover="border-color: #E8622C; color: #23305A;">Como chegar →</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Engenheiro+Adel+43+Tijuca+Rio+de+Janeiro" target="_blank" style="background: #fff; border: 2px solid #DCE3F2; color: #23305A; font-weight: 800; font-size: 15px; padding: 10px 20px; border-radius: 999px; transition: border-color .15s ease;" style-hover="border-color: #E8622C; color: #23305A;">Ver no Google Maps</a>
+        </div>
+      </div>
+      <form onSubmit="{{ submitForm }}" style="position: relative; background: #fff; border-radius: 26px; padding: 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 50px -24px rgba(35,48,90,.3);">
+        <div data-collapse style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <input id="f-resp" placeholder="Nome do responsável *" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 16px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; width: 100%; box-sizing: border-box;" style-focus="border-color: #FFC53D;">
+          <input id="f-crianca" placeholder="Nome da criança" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 16px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; width: 100%; box-sizing: border-box;" style-focus="border-color: #FFC53D;">
+        </div>
+        <div data-collapse style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <select id="f-idade" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 12px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; background: #fff; width: 100%; box-sizing: border-box;">
+            <option value="">Idade da criança *</option>
+            <option>Menos de 1 ano</option>
+            <option>1 ano</option>
+            <option>2 anos</option>
+            <option>3 anos</option>
+            <option>4 anos</option>
+            <option>5 anos</option>
+          </select>
+          <select id="f-horario" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 12px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; background: #fff; width: 100%; box-sizing: border-box;">
+            <option value="">Melhor horário p/ contato</option>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Fim do dia</option>
+          </select>
+        </div>
+        <input id="f-tel" type="tel" placeholder="Seu telefone / WhatsApp com DDD *" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 16px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; width: 100%; box-sizing: border-box;" style-focus="border-color: #FFC53D;">
+        <textarea id="f-msg" rows="3" placeholder="Mensagem (opcional)" style="border: 2px solid #EEE4D2; border-radius: 14px; padding: 13px 16px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: #23305A; outline: none; resize: vertical; width: 100%; box-sizing: border-box;" style-focus="border-color: #FFC53D;"></textarea>
+        <p id="f-error" role="alert" style="display: none; margin: 0; background: #FDECEC; color: #A83232; border-radius: 12px; padding: 11px 14px; font-size: 14px; font-weight: 700; line-height: 1.5;"></p>
+        <button type="submit" data-cta="bg" style="background: #E8622C; color: #fff; border: none; border-radius: 999px; padding: 16px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 17px; cursor: pointer; box-shadow: 0 4px 0 rgba(35,48,90,.2); transition: transform .15s ease;" style-hover="transform: translateY(-2px);">Enviar e falar no WhatsApp</button>
+        <p style="margin: 0; text-align: center; font-size: 13px; color: #5F6885; font-weight: 700;">Ao enviar, você será direcionado ao nosso WhatsApp</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer data-screen-label="Rodapé" style="background: #23305A; color: #fff; padding: 64px 24px 32px;">
+  <div data-collapse style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px;">
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: center;">
+        <img src="assets/logo-futurinho.png" alt="Creche Escola Futurinho" style="height: 60px; width: auto; display: block;">
+      </div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #B8C4E8; max-width: 340px;">Cuidamos, ensinamos e acolhemos cada criança com a atenção que ela merece. Um lugar para crescer feliz.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px;">
+      <span style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: #FFC53D;">Contato</span>
+      <span style="color: #B8C4E8;">Rua Engenheiro Adel, 43 — Tijuca, Rio de Janeiro</span>
+      <a href="{{ waLink }}" target="_blank" style="color: #fff; font-weight: 700;" style-hover="color: #FFC53D;">WhatsApp: +55 21 96620-3740</a>
+      <a href="https://instagram.com/crechefuturinho" target="_blank" style="color: #fff; font-weight: 700;" style-hover="color: #FFC53D;">@crechefuturinho</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px;">
+      <span style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: #FFC53D;">Funcionamento</span>
+      <span style="color: #B8C4E8;">Segunda a sexta, das 7h às 19h</span>
+      <a href="#matricula" style="align-self: flex-start; margin-top: 6px; background: #FFC53D; color: #23305A; font-weight: 800; padding: 10px 22px; border-radius: 999px;" style-hover="color: #23305A;">Agendar visita</a>
+    </div>
+  </div>
+  <p style="max-width: 1160px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px; color: #8B93AD; font-weight: 700;">© 2026 Creche Escola Futurinho. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ══════════ WHATSAPP FLUTUANTE ══════════ -->
+<a href="{{ waLink }}" target="_blank" aria-label="Falar com a creche no WhatsApp" style="position: fixed; bottom: 22px; right: 22px; z-index: 60; display: inline-flex; align-items: center; gap: 10px; background: #4BAE6B; color: #fff; font-weight: 800; font-size: 15px; padding: 14px 20px; border-radius: 999px; box-shadow: 0 12px 30px -8px rgba(35,48,90,.45); transition: transform .2s ease;" style-hover="transform: scale(1.06); color: #fff;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" style="flex: 0 0 auto;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.19 0 4.25.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.71c0 4.48-3.65 8.12-8.13 8.12h-.01a8.1 8.1 0 0 1-4.1-1.12l-.29-.17-3.11.82.83-3.03-.19-.31a8.09 8.09 0 0 1-1.24-4.32c.01-4.48 3.65-8.1 8.13-8.1m4.47 11.61c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.01-.37.11-.49.11-.11.24-.29.37-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.71 2.6 4.14 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.09.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28"></path></svg>
+  Falar no WhatsApp
+</a>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;enrollmentOpen&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Conteúdo&quot; },
+  &quot;whatsNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;5521966203740&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Conteúdo&quot; },
+  &quot;ctaColor&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#E8622C&quot;, &quot;options&quot;: [&quot;#E8622C&quot;, &quot;#FFC53D&quot;, &quot;#4A7DE0&quot;, &quot;#4BAE6B&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Estilo&quot; }
+}">
+class Component extends DCLogic {
+  state = { menuOpen: false };
+
+  renderVals() {
+    const num = this.props.whatsNumber ?? '5521966203740';
+    const waLink = 'https://wa.me/' + num + '?text=' + encodeURIComponent('Olá! Gostaria de saber sobre vagas disponíveis na Creche Escola Futurinho.');
+    const yellow = '#FFE9C2', blue = '#EAF1FF', orange = '#FFE0D1';
+
+    const features = [
+      { icon: '👩‍🏫', bg: yellow, title: 'Equipe qualificada', text: 'Profissionais preparados e apaixonados por educação infantil.' },
+      { icon: '🛡️', bg: blue, title: 'Ambiente seguro e monitorado', text: 'Espaços pensados para a segurança das crianças, o dia inteiro.' },
+      { icon: '🥗', bg: orange, title: 'Alimentação com nutricionista', text: 'Cardápios balanceados e adaptados à faixa etária de cada criança.' },
+      { icon: '💬', bg: yellow, title: 'Comunicação com responsáveis', text: 'Você acompanha de perto o dia a dia do seu filho.' },
+      { icon: '🤝', bg: blue, title: 'Social e emocional', text: 'Convivência, afeto e autonomia desde os primeiros anos.' },
+      { icon: '🌱', bg: orange, title: 'Adaptação cuidadosa', text: 'Período de adaptação gradual, no ritmo de cada família.' },
+    ];
+
+    const routine = [
+      { icon: '📖', bg: blue, title: 'Contação de histórias', text: 'Imaginação e linguagem em rodas de leitura.' },
+      { icon: '🤸', bg: yellow, title: 'Psicomotricidade', text: 'Movimento e coordenação com brincadeiras educativas.' },
+      { icon: '🎵', bg: orange, title: 'Musicalização', text: 'Música e ritmo para desenvolver expressão e escuta.' },
+      { icon: '🌎', bg: blue, title: 'Projeto Bilíngue', text: 'Primeiros contatos com o inglês de forma natural e lúdica.' },
+      { icon: '🎨', bg: yellow, title: 'Artes e criatividade', text: 'Pintura, colagem e experiências sensoriais.' },
+      { icon: '🧩', bg: orange, title: 'Jogos pedagógicos', text: 'Raciocínio e concentração no aprender brincando.' },
+      { icon: '🌿', bg: blue, title: 'Brincadeiras ao ar livre', text: 'Exploração e movimento no pátio, com segurança.' },
+      { icon: '🤝', bg: yellow, title: 'Roda de convivência', text: 'Socialização, afeto e autonomia no dia a dia.' },
+    ];
+
+    const audience = [
+      { n: '1', bg: yellow, text: 'Famílias que trabalham durante o dia' },
+      { n: '2', bg: blue, text: 'Mães e pais solo que precisam de uma rede de apoio confiável' },
+      { n: '3', bg: orange, text: 'Pais que buscam segurança e desenvolvimento para os filhos' },
+      { n: '4', bg: yellow, text: 'Crianças em fase de socialização' },
+      { n: '5', bg: blue, text: 'Responsáveis que querem acompanhamento próximo do dia a dia' },
+    ];
+
+    const testimonials = [
+      { initial: 'C', bg: '#F27DA8', name: 'Camila', role: 'Mãe de aluna', quote: 'Minha filha chora quando não pode ir! É o melhor sinal que eu poderia ter 💛' },
+      { initial: 'A', bg: '#8B5CF6', name: 'Adriana', role: 'Mãe de aluno', quote: 'Equipe super dedicada e atenciosa. Me sinto segura deixando meu filho aqui todos os dias!' },
+      { initial: 'R', bg: '#2BC3D6', name: 'Renata', role: 'Responsável', quote: 'Ambiente lindo, limpo e cheio de carinho. Recomendo de olhos fechados para todas as famílias! 💗' },
+      { initial: 'M', bg: '#3DBE7B', name: 'Marcela', role: 'Mãe de aluna', quote: 'O desenvolvimento da minha filha deu um salto enorme desde que entrou no Futurinho. Profissionais incríveis!' },
+      { initial: 'P', bg: '#3B82F6', name: 'Patricia', role: 'Responsável', quote: 'Confio 100% na equipe. Meu filho chegou tímido e hoje não quer ir embora. Gratidão enorme! 🚀' },
+    ];
+
+    const faqs = [
+      { q: 'Quais idades a creche atende?', a: 'Atendemos crianças do Berçário ao Pré 2, com turmas organizadas por faixa etária e pensadas para cada fase do desenvolvimento.' },
+      { q: 'Qual é o horário de funcionamento?', a: 'Funcionamos de segunda a sexta, das 7h às 19h — com flexibilidade para a rotina de quem trabalha o dia inteiro.' },
+      { q: 'A creche oferece alimentação?', a: 'Sim! Todas as refeições são planejadas por nutricionista, com cardápios balanceados e adaptados à idade de cada criança.' },
+      { q: 'Como funciona o período de adaptação?', a: 'A adaptação é gradual e acompanhada de perto pela equipe, respeitando o ritmo da criança e da família. Cada caso é conversado individualmente.' },
+      { q: 'Posso agendar uma visita?', a: 'Claro! Preencha o formulário abaixo ou chame no WhatsApp. Vamos adorar mostrar cada cantinho da Futurinho para você.' },
+      { q: 'Como recebo informações sobre a rotina do meu filho?', a: 'Mantemos comunicação próxima e constante com os responsáveis, com atualizações sobre alimentação, sono e atividades do dia.' },
+      { q: 'Ainda há vagas disponíveis?', a: 'As matrículas estão abertas! Como as turmas são reduzidas, recomendamos agendar sua visita o quanto antes para garantir a vaga.' },
+    ];
+
+    return {
+      enrollmentOpen: this.props.enrollmentOpen ?? true,
+      waLink,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => { if (this.state.menuOpen) this.setState({ menuOpen: false }); },
+      features, routine, audience, testimonials, faqs,
+      pickSpace: (e) => this._pickTab(e, 'space'),
+      pickActivity: (e) => this._pickAct(e),
+      toggleFaq: (e) => this._toggleFaq(e),
+      submitForm: (e) => this._submitForm(e, num),
+    };
+  }
+
+  _pickTab(e, kind) {
+    const idx = e.currentTarget.dataset[kind];
+    document.querySelectorAll('[data-' + kind + ']').forEach((b) => {
+      b.style.borderColor = b.dataset[kind] === idx ? '#E8622C' : 'transparent';
+    });
+    document.querySelectorAll('[data-' + kind + '-img]').forEach((img) => {
+      img.style.opacity = img.dataset[kind + 'Img'] === idx ? '1' : '0';
+    });
+  }
+
+  _pickAct(e) {
+    const idx = e.currentTarget.dataset.act;
+    document.querySelectorAll('[data-act]').forEach((b) => {
+      const on = b.dataset.act === idx;
+      b.style.background = on ? '#FFC53D' : 'rgba(255,255,255,.1)';
+      b.style.color = on ? '#23305A' : '#fff';
+    });
+    document.querySelectorAll('[data-act-img]').forEach((img) => {
+      img.style.opacity = img.dataset.actImg === idx ? '1' : '0';
+    });
+    document.querySelectorAll('[data-act-panel]').forEach((p) => {
+      p.style.display = p.dataset.actPanel === idx ? 'flex' : 'none';
+    });
+  }
+
+  _toggleFaq(e) {
+    const btn = e.currentTarget;
+    const panel = btn.parentElement.querySelector('[data-faq-panel]');
+    const chev = btn.querySelector('[data-chev]');
+    const open = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+    document.querySelectorAll('[data-faq-panel]').forEach((p) => { p.style.maxHeight = '0px'; });
+    document.querySelectorAll('[data-chev]').forEach((c) => { c.style.transform = 'rotate(0deg)'; });
+    if (!open) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      chev.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  _submitForm(e, num) {
+    e.preventDefault();
+    const g = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    const mark = (id, bad) => { const el = document.getElementById(id); if (el) el.style.borderColor = bad ? '#D64545' : '#EEE4D2'; };
+    const err = document.getElementById('f-error');
+    const missing = [];
+    if (!g('f-resp')) missing.push('o nome do responsável');
+    if (!g('f-idade')) missing.push('a idade da criança');
+    const digits = g('f-tel').replace(/\D/g, '');
+    const telMissing = !g('f-tel');
+    const telInvalid = !telMissing && (digits.length < 10 || digits.length > 13);
+    if (telMissing) missing.push('seu telefone');
+    mark('f-resp', !g('f-resp'));
+    mark('f-idade', !g('f-idade'));
+    mark('f-tel', telMissing || telInvalid);
+    if (missing.length) {
+      err.textContent = 'Quase lá! Para continuar, preencha ' + missing.join(', ') + '.';
+      err.style.display = 'block';
+      return;
+    }
+    if (telInvalid) {
+      err.textContent = 'Confira o telefone — inclua o DDD, ex.: (21) 96666-0000.';
+      err.style.display = 'block';
+      return;
+    }
+    err.style.display = 'none';
+    let msg = 'Olá! Gostaria de agendar uma visita à Creche Escola Futurinho.';
+    msg += '\nResponsável: ' + g('f-resp');
+    if (g('f-crianca')) msg += '\nCriança: ' + g('f-crianca');
+    msg += '\nIdade: ' + g('f-idade');
+    msg += '\nTelefone: ' + g('f-tel');
+    if (g('f-horario')) msg += '\nMelhor horário para contato: ' + g('f-horario');
+    if (g('f-msg')) msg += '\nMensagem: ' + g('f-msg');
+    window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(msg), '_blank');
+  }
+
+  componentDidMount() {
+    // sempre abrir no topo
+    if (window.location.hash) history.replaceState(null, '', window.location.pathname + window.location.search);
+    window.scrollTo(0, 0);
+    this._topTimer = setTimeout(() => { if (window.scrollY > 0 && !this._userScrolled) window.scrollTo(0, 0); }, 250);
+    this._markScroll = () => { this._userScrolled = true; };
+    window.addEventListener('wheel', this._markScroll, { passive: true, once: true });
+    window.addEventListener('touchstart', this._markScroll, { passive: true, once: true });
+
+    // reveal ao rolar — adiciona data-revealed (CSS !important vence re-renders); data-reveal permanece
+    const show = (el) => el.setAttribute('data-revealed', '');
+    this._revealCheck = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((el) => {
+        if (el.getBoundingClientRect().top < vh * 0.92) show(el);
+      });
+    };
+    this._revealCheck();
+    // segurança: re-marca elementos que um re-render tenha recriado sem o atributo
+    this._revealTimer = setInterval(() => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((el) => {
+        if (el.getBoundingClientRect().top < vh * 1.05) show(el);
+      });
+    }, 800);
+
+    // nav com fundo ao rolar
+    this._onScroll = () => {
+      if (this._revealCheck) this._revealCheck();
+      const nav = document.getElementById('fut-nav');
+      if (!nav) return;
+      const on = window.scrollY > 24 || this.state.menuOpen;
+      nav.style.background = on ? 'rgba(255,249,240,.95)' : 'rgba(255,249,240,0)';
+      nav.style.boxShadow = on ? '0 8px 24px -16px rgba(35,48,90,.25)' : 'none';
+      nav.style.backdropFilter = on ? 'blur(10px)' : 'none';
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+
+    // contador animado
+    const counter = document.getElementById('fut-counter');
+    if (counter) {
+      const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - start) / 1400);
+        const eased = 1 - Math.pow(1 - p, 3);
+        counter.textContent = '+' + Math.round(200 * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+
+    this._applyCta();
+  }
+
+  componentDidUpdate() {
+    this._applyCta();
+    if (this._onScroll) this._onScroll();
+  }
+
+  _applyCta() {
+    const c = this.props.ctaColor;
+    if (!c) return;
+    document.querySelectorAll('[data-cta="bg"]').forEach((el) => { el.style.background = c; });
+  }
+
+  componentWillUnmount() {
+    if (this._revealTimer) clearInterval(this._revealTimer);
+    if (this._topTimer) clearTimeout(this._topTimer);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._markScroll) {
+      window.removeEventListener('wheel', this._markScroll);
+      window.removeEventListener('touchstart', this._markScroll);
+    }
+  }
+}
+</script>
+</body>
+</html>
